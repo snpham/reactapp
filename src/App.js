@@ -1,14 +1,8 @@
 // /* global React ReactDOM */  // use to remove Reach var flags
+import React from 'react';
+import ReactDOM from "react-dom";
+import Pet from "./Pet"
 
-const Pet = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, props.name),
-    React.createElement("h3", {}, props.animal),
-    React.createElement("h3", {}, props.breed),
-  ]);
-};
-
-const x = 5;
 
 const App = () => {
   return React.createElement("div", {}, [
