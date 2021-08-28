@@ -1,3 +1,5 @@
+// /* global React ReactDOM */  // use to remove Reach var flags
+
 const Pet = (props) => {
   return React.createElement("div", {}, [
     React.createElement("h2", {}, props.name),
@@ -5,6 +7,8 @@ const Pet = (props) => {
     React.createElement("h3", {}, props.breed),
   ]);
 };
+
+const x = 5;
 
 const App = () => {
   return React.createElement("div", {}, [
