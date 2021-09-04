@@ -24,8 +24,10 @@
     "prettier": "^2.3.2"
   },
   "dependencies": {
+    "rea": "0.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   },
   "browserslist": [
     "last 2 Chrome versions"
