@@ -1,5 +1,7 @@
 import {Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import Carousel from "./Carousel";
+
 
 class Details extends Component {
     state = {loading: true};
@@ -22,13 +24,18 @@ class Details extends Component {
             city: json.pets[0].city,
             state: json.pets[0].state,
             description: json.pets[0].description,
+            images: json.pets[0].images,
         
         })
     }
     render () {
-        const {animal, breed, city, state, description, name} = this.state;
+        if (this.state.loading){
+            return <h2>loading ...</h2>
+        }
+        const {animal, breed, city, state, description, name, images} = this.state;
         return (
             <div className="details">
+                <Carousel images={images}/>
                 <div>
                     <h1>{name}</h1>
                     <h2>{`${animal} - ${breed} - ${city}, ${state}`}</h2>
